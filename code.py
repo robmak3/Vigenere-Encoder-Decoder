@@ -12,7 +12,8 @@ def encode():
     key = sys.argv[3].upper()
     encryptedtext=""
     for i in range(len(text)):
-        encryptedtext += table[ord(text[i]) - 65][ord(key[i])-65]
+        print(ord(text[i]) - 65)
+        encryptedtext += table[ord(text[i % len(text)]) - 65][ord(key[i % len(key)])-65]
     return(encryptedtext)
 #
 def decode():
@@ -20,7 +21,7 @@ def decode():
     key = sys.argv[3].upper()
     text = ''
     for i in range(len(encryptedtext)):
-        text += chr(table[ord(key[i])-65].index(encryptedtext[i]) + 65)
+        text += chr(table[ord(key[i % len(key)])-65].index(encryptedtext[i % len(encryptedtext)]) + 65)
     return(text)
 #
 def returnimproperargs():
