@@ -4,4 +4,4 @@ This program encodes and decodes vigenere ciphers and generates a standard table
 ## How to run: 
 make run ARGS="[encode/decode] [text or encryptedtext] [key]"
 
-##Cybersecurity Homework Due 10/19/20
+## Cybersecurity Homework Due 10/19/20
